@@ -140,7 +140,7 @@ public class Loops extends PApplet
 		{
 			float x = radius + (i * diameter);
 			// This is another nice way tocalculate x
-			//x = map(i, 0, numCircles, radius, width + radius);
+			//x = map(i, 0, numCircles, radius, width ++ radius);
 			fill(i * colorgap, 255, 255);
 			ellipse(x, height * 0.4f, diameter, diameter);
 		}
@@ -204,13 +204,25 @@ public class Loops extends PApplet
 			}
 		}
 	}
+	void tutProb() 
+	{
+		colorMode(HSB);
+		stroke(255);		
+		background(0);
 
+		float numLines = 11;
+		float gap = width /(float) numLines;
+		for(int box = 0 ; box < numLines ; box ++)
+		{
+			line(gap, height-(gap*box), width-gap, height-(gap*box));//x1,y1,x2,y2
+			line(height-(gap*box),gap, height-(gap*box), width-gap);
+			
+		}
+	}
 
 	public void draw()
 	{			
-		background(0);
-		stroke(255);
-		noFill();	
+    	
 
 		/*
 		// Examples
@@ -229,7 +241,8 @@ public class Loops extends PApplet
 		//problem2();
 		//problem3();
 		//problem4();
-		problem5();
-		problem6();
+		//problem5();
+		//problem6();
+		tutProb();
 	}
 }

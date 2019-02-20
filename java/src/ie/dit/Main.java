@@ -22,10 +22,16 @@ public class Main
 		
 	}
 
+	public void arrays()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch(a, new Arrays());
+	}
+
 	
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-		main.loops();			
+		main.arrays();			
 	}
 }
